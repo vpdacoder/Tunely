@@ -1,28 +1,28 @@
 var db = require("./models");
 
 var sampleAlbums = [{
-   artistName: 'Ladyhawke',
-   name: 'Ladyhawke',
-   releaseDate: '2008, November 18',
-   genres: [ 'new wave', 'indie rock', 'synth pop' ]
+   artistName: 'Flatbush Zombies',
+   name: 'Vacation in Hell',
+   releaseDate: '2018, April 8',
+   genres: [ 'hip-hop', 'rap' ]
  },
  {
-   artistName: 'The Knife',
-   name: 'Silent Shout',
-   releaseDate: '2006, February 17',
-   genres: [ 'synth pop', 'electronica', 'experimental' ]
+   artistName: 'Kendrick Lamar',
+   name: 'good kid, m.A.A.d city',
+   releaseDate: '2013, February 17',
+   genres: [ '10s hip-hop']
  },
  {
-   artistName: 'Juno Reactor',
-   name: 'Shango',
-   releaseDate: '2000, October 9',
-   genres: [ 'electronic', 'goa trance', 'tribal house' ]
+   artistName: 'MF Doom',
+   name: 'Operation: Doomsday',
+   releaseDate: '1999',
+   genres: [ 'hip-hop', 'rap' ]
  },
  {
-   artistName: 'Philip Wesley',
-   name: 'Dark Night of the Soul',
-   releaseDate: '2008, September 12',
-   genres: [ 'piano' ]
+   artistName: 'Backstreet Boys',
+   name: 'Backstreet Boys',
+   releaseDate: '1997',
+   genres: [ 'pop' ]
  }];
 
 // remove all records that match {} -- which means remove ALL records
