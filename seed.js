@@ -4,25 +4,30 @@ var sampleAlbums = [{
    artistName: 'Flatbush Zombies',
    name: 'Vacation in Hell',
    releaseDate: '2018, April 8',
-   genres: [ 'hip-hop', 'rap' ]
+   genres: [ 'hip-hop', 'rap' ],
+   imageurl: ''
  },
  {
    artistName: 'Kendrick Lamar',
    name: 'good kid, m.A.A.d city',
    releaseDate: '2013, February 17',
-   genres: [ '10s hip-hop']
+   genres: [ '10s hip-hop'],
+   imageurl: ''
  },
  {
    artistName: 'MF Doom',
    name: 'Operation: Doomsday',
    releaseDate: '1999',
-   genres: [ 'hip-hop', 'rap' ]
+   genres: [ 'hip-hop', 'rap' ],
+   imageurl: ''
+
  },
  {
    artistName: 'Backstreet Boys',
    name: 'Backstreet Boys',
    releaseDate: '1997',
-   genres: [ 'pop' ]
+   genres: [ 'pop' ],
+   imageurl: ''
  }];
 
 // remove all records that match {} -- which means remove ALL records
