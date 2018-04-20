@@ -4,7 +4,8 @@ var AlbumSchema = new mongoose.Schema({
   artistName: String,
   name: String,
   releasedDate: String,
-  genres: String
+  genres: String,
+  imageurl: String
 });
 
 var Album = mongoose.model('Album', AlbumSchema);

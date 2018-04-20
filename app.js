@@ -47,14 +47,24 @@ app.get('/collections', function (req, res) {
 
 //CREATE
 
+// app.get('collections/form', function (req,res){
+//   res.render('form');
+// });
+
 app.post("/collections", function(req,res){
-  //get data from the form and add to the DB
+  //get data from the form and add to the DB thru bodyParser
   var artistName   = req.body.artistName;
   var name         = req.body.name;
   var releaseDate  = req.body.releaseDate;
   var genres       = req.body.genres;
+  var imageurl     = req.body.imageurl;
 
-  var newAlbum     = {artistName:artistName, name:name,       releaseDate:releaseDate, genres:genres}
+  var newAlbum     = {artistName:artistName,
+                      name:name,
+                      releaseDate:releaseDate,
+                      genres:genres,
+                      imageurl:imageurl
+                      }
   //Create a new album and save it to the DB
   db.Album.create(newAlbum, function(err,newlyCreatedAlbum){
     if(err){
@@ -65,6 +75,8 @@ app.post("/collections", function(req,res){
     }
   })
 })
+
+//EDIT
 
 //UPDATE
 
