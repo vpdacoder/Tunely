@@ -47,9 +47,26 @@ app.get('/collections', function (req, res) {
 
 //CREATE
 
+app.post("/collections", function(req,res){
+  //get data from the form and add to the DB
+  var artistName   = req.body.artistName;
+  var name         = req.body.name;
+  var releaseDate  = req.body.releaseDate;
+  var genres       = req.body.genres;
+
+  var newAlbum     = {artistName:artistName, name:name,       releaseDate:releaseDate, genres:genres}
+  //Create a new album and save it to the DB
+  db.Album.create(newAlbum, function(err,newlyCreatedAlbum){
+    if(err){
+      console.log(err);
+    } else {
+      //redirect back to collections page
+      res.redirect('/collections');
+    }
+  })
+})
 
 //UPDATE
-
 
 //DELETE
 
