@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ./partials/head.ejs %>
+</head>
+<body class="container">
+
+<header>
+    <% include ./partials/header.ejs %>
+</header>
+
+<main>
+  <!-- albums! -->
+<div id='albums'>
+<% albums.forEach(function(album) { %>
+  <!-- one album -->
+  <div class="row album">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="panel panel-default">
+        <div class="panel-body">
+        <!-- begin album internal row -->
+          <div class='row'>
+            <div class="col-md-3 col-xs-12 thumbnail album-art">
+              <img width="800" height="800" src="https://images.unsplash.com/photo-1471029093449-ca61fffdc2af?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5d90df62acc54e7ccf0c4d865d18429e&auto=format&fit=crop&w=1050&q=80" alt="album image">
+            </div>
+            <div class="col-md-9 col-xs-12">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <h4 class='inline-header'>Album Name:</h4>
+                  <span class='album-name'><%= album.name %></span>
+                </li>
+                <li class="list-group-item">
+                  <h4 class='inline-header'>Artist Name:</h4>
+                  <span class='artist-name'><%= album.artistName %></span>
+                </li>
+                <li class="list-group-item">
+                  <h4 class='inline-header'>Genres:</h4>
+                  <span class='album-releaseDate'><%= album.genres %></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- end of album internal row -->
+          <div class='panel-footer'>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end one album -->
+<% }); %>
+</div>
+</main>
+
+<footer>
+    <% include ./partials/footer.ejs %>
+</footer>
+
+</body>
+</html>

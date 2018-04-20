@@ -3,6 +3,79 @@
 
 <head>
   <% include ./partials/head.ejs %>
+
+  <style>
+* {
+    box-sizing: border-box;
+}
+
+input[type=text],input[type=email], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.containerOne {
+    padding: 20px;
+    width: 50%;
+    margin-left: 23%;
+    margin-bottom: 25px;
+
+}
+
+.c25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.c75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear:left;
+
+}
+@media (max-width: 600px) {
+    .c25, .c75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+}
+</style>
 </head>
 
 <body class="container">
@@ -19,14 +92,56 @@
     <div>
       <h1>Albums</h1>
     </div>
-    <div class="card border-dark mb-3" style="width: 18rem;">
+    <%# <div class="card border-dark mb-3" style="width: 18rem;">
       <img class="card-img-top" width="286" height="180" src="https://images.unsplash.com/photo-1471029093449-ca61fffdc2af?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5d90df62acc54e7ccf0c4d865d18429e&auto=format&fit=crop&w=1050&q=80" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Card title</h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
-    </div>
+    </div> %>
+      <h2>Good Chunes</h2>
+
+
+      <div class="containerOne">
+        <form method="POST" action="/collections">
+          <div class="row">
+            <div class="c25">
+              <label for="name">Album Name</label>
+            </div>
+            <div class="c75">
+              <input required type="text" id="name" name="name" placeholder="Album name..">
+            </div>
+          </div>
+          <div class="row">
+            <div class="c25">
+              <label for="artistName">Artist Name</label>
+            </div>
+            <div class="c75">
+              <input required type="text" id="artistName" name="artistName" placeholder="Artist name..">
+            </div>
+          </div>
+          <div class="row">
+            <div class="c25">
+              <label for="releasedate">Release Date</label>
+            </div>
+            <div class="c75">
+              <input required type="text" id="releasedate" name="releaseDate" placeholder="Release Date..">
+            </div>
+          </div>
+          <div class="row">
+            <div class="c25">
+              <label for="generes">Genres</label>
+            </div>
+            <div class="c75">
+              <input required type="text" id="generes" name="generes" placeholder="Genres..">
+            </div>
+          </div>
+          <div class="row">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+      </div>
   </main>
 
   <footer>
