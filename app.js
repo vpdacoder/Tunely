@@ -93,6 +93,20 @@ app.get("/collections/:id/edit", function(req,res){
   });
 })
 
+// ===================================
+//UPDATE ROUTE
+// ===================================
+app.put("/collections/:id", function(req,res){
+  db.Album.findByIdAndUpdate(req.params.id,req.body.album,function(err, updatedAlbum){
+    if(err){
+      res.redirect("/collections");
+    }else {
+      res.redirect("/collections");
+    }
+  });
+});
+
+
 
 
 app.listen(3000);
