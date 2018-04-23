@@ -106,6 +106,17 @@ app.put("/collections/:id", function(req,res){
   });
 });
 
+// ===================================
+//DESTROY ROUTE
+// ===================================
+app.delete("/collections/:id", function(req,res){
+  db.Album.findByIdAndRemove(req.params.id, function(err){
+    if(err){
+      res.redirect("/collections");
+    } else
+      res.redirect("/collections");
+  });
+});
 
 
 
