@@ -8,8 +8,9 @@ var db          = require('./models');
 
 
 //require express in our app
-var express     = require('express'),
-    bodyParser  = require('body-parser');
+var express          = require('express'),
+    bodyParser       = require('body-parser'),
+    methodOverride   = require('method-override')
 
 // generate a new express app and call it 'app'
 var app         = express();
@@ -25,6 +26,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
 
+//Use this for any requests with _method
+app.use(methodOverride("_method"));
+
+
 // use res.render to load up an ejs view file
 
 // index page
@@ -32,8 +37,10 @@ app.get('/', function(req, res) {
     res.render('index');
 });
 
-//READ
 
+// ===================================
+//READ
+// ===================================
 app.get('/collections', function (req, res) {
   // send all books as JSON response
   db.Album.find({}, function(err, albums){
@@ -45,12 +52,9 @@ app.get('/collections', function (req, res) {
   });
 });
 
+// ===================================
 //CREATE
-
-// app.get('collections/form', function (req,res){
-//   res.render('form');
-// });
-
+// ===================================
 app.post("/collections", function(req,res){
   //get data from the form and add to the DB thru bodyParser
   var artistName   = req.body.artistName;
@@ -76,11 +80,20 @@ app.post("/collections", function(req,res){
   })
 })
 
-//EDIT
+// ===================================
+//EDIT ROUTES
+// ===================================
+app.get("/collections/:id/edit", function(req,res){
+  db.Album.findById(req.params.id, function(err,foundAlbum){
+    if(err){
+      res.redirect("/collections");
+    } else {
+      res.render("edit", {album: foundAlbum});
+    }
+  });
+})
 
-//UPDATE
 
-//DELETE
 
 app.listen(3000);
 console.log('3000 is the magic port');

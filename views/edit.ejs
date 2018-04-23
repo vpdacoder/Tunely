@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% include ./partials/head.ejs %>
+
+<link href="../stylesheets/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="container">
+
+  <header>
+    <% include ./partials/header.ejs %>
+  </header>
+
+  <div>
+    <h1 id="secondHeader">Edit Album</h1>
+  </div>
+
+    <div class="containerOne">
+    <form action="/collections/<%=album._id %>?_method=PUT" method="POST">
+      <div class="row">
+        <div class="c25">
+          <label for="name">Album Name</label>
+        </div>
+        <div class="c75">
+          <input required type="text" id="name" name="album[name]" value="<% album.name %>">
+        </div>
+      </div>
+      <div class="row">
+        <div class="c25">
+          <label for="artistName">Artist Name</label>
+        </div>
+        <div class="c75">
+          <input required type="text" id="artistName" name="album[artistName]" value="<%= album.artistName %>">
+        </div>
+      </div>
+      <div class="row">
+        <div class="c25">
+          <label for="releasedate">Release Date</label>
+        </div>
+        <div class="c75">
+          <input required type="text" id="releasedate" name="album[releaseDate]" value="<%= album.releaseDate %>">
+        </div>
+      </div>
+      <div class="row">
+        <div class="c25">
+          <label for="genres">Genres</label>
+        </div>
+        <div class="c75">
+          <input required type="text" id="genres" name="album[genres]" value="<%= album.genres %>">
+        </div>
+      </div>
+      <div class="row">
+        <div class="c25">
+          <label for="imageurl">Album Cover</label>
+        </div>
+        <div class="c75">
+          <input required type="text" id="imageurl" name="album[imageurl]" value="<%= album.imageurl %>">
+        </div>
+      </div>
+      <div class="row">
+        <input class="btn btn-primary btn-large" type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
+
+  <footer>
+    <% include ./partials/footer.ejs %>
+  </footer>

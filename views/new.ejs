@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% include ./partials/head.ejs %>
+
+<link href="../stylesheets/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="container">
+
+  <header>
+    <% include ./partials/header.ejs %>
+  </header>
+
+<div>
+  <h1 id="secondHeader">Add Another Album</h1>
+</div>
+
+  <div class="containerOne">
+    <form method="POST" action="/collections">
+      <div class="row">
+        <div class="c25">
+          <label for="name">Album Name</label>
+        </div>
+        <div class="c75">
+          <input required type="text" id="name" name="name" placeholder="Album name..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="c25">
+          <label for="artistName">Artist Name</label>
+        </div>
+        <div class="c75">
+          <input required type="text" id="artistName" name="artistName" placeholder="Artist name..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="c25">
+          <label for="releasedate">Release Date</label>
+        </div>
+        <div class="c75">
+          <input required type="text" id="releasedate" name="releaseDate" placeholder="Release Date..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="c25">
+          <label for="generes">Genres</label>
+        </div>
+        <div class="c75">
+          <input required type="text" id="generes" name="genres" placeholder="Genres..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="c25">
+          <label for="imageurl">Album Cover</label>
+        </div>
+        <div class="c75">
+          <input required type="text" id="imageurl" name="imageurl" placeholder="Album Cover Url..">
+        </div>
+      </div>
+      <div class="row">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+
+  <footer>
+    <% include ./partials/footer.ejs %>
+  </footer>

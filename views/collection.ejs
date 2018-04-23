@@ -37,6 +37,17 @@
                   <h4 class='inline-header'>Genres:</h4>
                   <span class='album-releaseDate'><%= album.genres %></span>
                 </li>
+                <li class="list-group-item">
+                  <p>
+                    <a class="btn btn-primary btn-large"href="collections/<%=album._id %>/edit">EDIT</a>
+                    <!-- <a class="btn btn-primary btn-large"href="collections/form">DELETE</a> -->
+                  </p>
+                </li>
+                <li class="list-group-item">
+                <form id="delete" action="/collections/<%= album._id %>?_method=DELETE" method="POST" >
+                    <button class="btn btn-danger">DELETE</button>
+                </form>
+                </li>
               </ul>
             </div>
           </div>
