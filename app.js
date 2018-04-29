@@ -77,8 +77,8 @@ app.post("/collections", function(req,res){
       //redirect back to collections page
       res.redirect('/collections');
     }
-  })
-})
+  });
+});
 
 // ===================================
 //EDIT ROUTES
@@ -120,5 +120,6 @@ app.delete("/collections/:id", function(req,res){
 
 
 
-app.listen(3000);
-console.log('3000 is the magic port');
+app.listen(process.env.PORT || 3000 function (){
+  console.log('3000 is the magic port');
+});

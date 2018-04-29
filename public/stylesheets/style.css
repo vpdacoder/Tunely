@@ -4,7 +4,7 @@
 body {
 
   /* background-color: #F5FFF9; */
-  background-image: url(https://i.imgur.com/zAepB1N.jpg);
+  background-image: url("https://images.unsplash.com/photo-1436319460292-00da52a6c97d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=942008212b3d7315f2a8d762b6602ba1&auto=format&fit=crop&w=1050&q=80");
   background-size: cover;
 
 }
@@ -20,27 +20,15 @@ text-align: center;
 font-family: 'Gloria Hallelujah', cursive;
 }
 .jumbotron{
-<<<<<<< HEAD
   background-image: url('https://images.unsplash.com/photo-1521798948753-02f843fd3e5d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7a2059a47213b313bb76f8996273d794&auto=format&fit=crop&w=1050&q=80');
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
 }
+
 #secondHeader {
   text-align: center;
 }
-=======
-  background-color: rgba(0, 0, 0, 0);
-  color: grey;
-
-
-}
-
-/* .container{
-  background-image: url(https://i.imgur.com/zAepB1N.jpg);
-  background-size: cover;
-
-} */
 
 header {
 
@@ -51,25 +39,8 @@ main {
   margin-right: 300px;
   margin-bottom: 100px;
 }
-/* }
-.carousel {
-  width: 300px;
-  height: 50px;
 
-} */
-
-/* element {
-  width: 4308px;
-  left: 0px;
-  display: block;
-  transform: translate3d(0px, 0px, 0px);
-  transition:;
-    transition-property: all;
-
-} */
-
->>>>>>> 2bb009171101ec8e1231e961c45a266b966002a8
-input[type=text],input[type=email], select, textarea{
+input[type=text],input[type=email], select, textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -124,6 +95,7 @@ input[type=submit]:hover {
     clear:left;
 
 }
+
 @media (max-width: 600px) {
     .c25, .c75, input[type=submit] {
         width: 100%;
